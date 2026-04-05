@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Kitsune Vehicle Overhaul — blocks.xml
+
+	Cacti should crumble on vehicle impact, not shred your truck.
+
+	VehicleHitScale controls two things inversely:
+	- Higher = MORE damage to the block (vehicle plows through)
+	- Higher = LESS self-damage to vehicle (selfDmg = raw * 2.5/scale)
+
+	999 = block shatters instantly, vehicle takes essentially zero damage
+
+	Cactus04/05 already had 999 in vanilla. The big saguaros (01/02/03)
+	and medium cactus (06) were missing it entirely. TFP oversight.
+
+	treeCactus01 is the base block. 02, 03, and 06 inherit from it,
+	so setting it on 01 fixes all four at once.
+-->
+<configs>
+
+	<!-- Big saguaro cacti — the desert truck-killers.                -->
+	<!-- 50 = shatters easily, leaves a tiny scratch. Clear coat damage. -->
+	<!-- Small cacti (04/05) keep vanilla 999 = truly zero damage.   -->
+	<append xpath="/blocks/block[@name='treeCactus01']">
+		<property name="VehicleHitScale" value="50"/>
+	</append>
+
+</configs>
