@@ -2,8 +2,8 @@
 <xml>
 	<Name value="KitsuneVehicleOverhaul" />
 	<DisplayName value="Kitsune Vehicle Overhaul" />
-	<Version value="1.0.0" />
-	<Description value="Rebalances vehicle collision damage so cacti and vegetation don't shred your ride. Reduces self-damage by weight class, fixes cactus VehicleHitScale, and adds modest HP buffs. Supports vanilla + Bdub's Vehicles." />
+	<Version value="1.1.0" />
+	<Description value="Rebalances vehicle collision damage so cacti and vegetation don't shred your ride. Reduces self-damage by weight class, fixes cactus VehicleHitScale, and adds modest HP buffs. Supports vanilla + Bdub's Vehicles + Vehicle Madness + Witos Vehicles (all optional)." />
 	<Author value="Kitsune" />
 	<Website value="" />
 </xml>

@@ -9,7 +9,7 @@
 	Self-damage formula: raw × EffectSelfDamagePer
 	Grease Monkey already gives -20% per rank. Our values stack additively.
 
-	Supports: Vanilla + Bdub's Vehicles
+	Supports: Vanilla + Bdub's Vehicles + Vehicle Madness + Witos Vehicles
 -->
 <configs>
 
@@ -310,6 +310,791 @@
 	<set xpath="/items/item[@name='vehicleUH60placeable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">13000</set>
 	<append xpath="/items/item[@name='vehicleUH60placeable']/effect_group[@name='Base Effects']">
 		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.25" tags="vehicle"/>
+	</append>
+
+
+	<!-- ============================================================ -->
+	<!--                                                              -->
+	<!--                    VEHICLE MADNESS                           -->
+	<!--              (by Ragsy / Guppycur et al.)                    -->
+	<!--         effect_group name = item name for all VM             -->
+	<!--                                                              -->
+	<!-- ============================================================ -->
+
+
+	<!-- ============================================================ -->
+	<!--       VEHICLE MADNESS — Motorcycles/Quads/Light (-35%)       -->
+	<!-- ============================================================ -->
+
+	<!-- Quad | HP: 6000 → 7500 -->
+	<set xpath="/items/item[@name='vehicleVMQuadPlaceable']/effect_group[@name='vehicleVMQuadPlaceable']/passive_effect[@name='DegradationMax']/@value">7500</set>
+	<append xpath="/items/item[@name='vehicleVMQuadPlaceable']/effect_group[@name='vehicleVMQuadPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.35" tags="vehicle"/>
+	</append>
+
+	<!-- Quad 2 | HP: 7000 → 8750 -->
+	<set xpath="/items/item[@name='vehicleVMQuad2Placeable']/effect_group[@name='vehicleVMQuad2Placeable']/passive_effect[@name='DegradationMax']/@value">8750</set>
+	<append xpath="/items/item[@name='vehicleVMQuad2Placeable']/effect_group[@name='vehicleVMQuad2Placeable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.35" tags="vehicle"/>
+	</append>
+
+	<!-- MotoGuppy | HP: 6000 → 7500 -->
+	<set xpath="/items/item[@name='vehicleVMMotoGuppyPlaceable']/effect_group[@name='vehicleVMMotoGuppyPlaceable']/passive_effect[@name='DegradationMax']/@value">7500</set>
+	<append xpath="/items/item[@name='vehicleVMMotoGuppyPlaceable']/effect_group[@name='vehicleVMMotoGuppyPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.35" tags="vehicle"/>
+	</append>
+
+	<!-- Vespa | HP: 6000 → 7500 -->
+	<set xpath="/items/item[@name='vehicleVMVespaPlaceable']/effect_group[@name='vehicleVMVespaPlaceable']/passive_effect[@name='DegradationMax']/@value">7500</set>
+	<append xpath="/items/item[@name='vehicleVMVespaPlaceable']/effect_group[@name='vehicleVMVespaPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.35" tags="vehicle"/>
+	</append>
+
+	<!-- Vespakart | HP: 7000 → 8750 -->
+	<set xpath="/items/item[@name='vehicleVMVespakartPlaceable']/effect_group[@name='vehicleVMVespakartPlaceable']/passive_effect[@name='DegradationMax']/@value">8750</set>
+	<append xpath="/items/item[@name='vehicleVMVespakartPlaceable']/effect_group[@name='vehicleVMVespakartPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.35" tags="vehicle"/>
+	</append>
+
+	<!-- Caterham | HP: 9200 → 11500 -->
+	<set xpath="/items/item[@name='vehicleVMCaterhamPlaceable']/effect_group[@name='vehicleVMCaterhamPlaceable']/passive_effect[@name='DegradationMax']/@value">11500</set>
+	<append xpath="/items/item[@name='vehicleVMCaterhamPlaceable']/effect_group[@name='vehicleVMCaterhamPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.35" tags="vehicle"/>
+	</append>
+
+
+	<!-- ============================================================ -->
+	<!--       VEHICLE MADNESS — Sedans/Cars (-40%)                   -->
+	<!-- ============================================================ -->
+
+	<!-- Sedan | HP: 8000 → 10000 -->
+	<set xpath="/items/item[@name='vehicleVMSedanPlaceable']/effect_group[@name='vehicleVMSedanPlaceable']/passive_effect[@name='DegradationMax']/@value">10000</set>
+	<append xpath="/items/item[@name='vehicleVMSedanPlaceable']/effect_group[@name='vehicleVMSedanPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- Rusty Sedan | HP: 8000 → 10000 -->
+	<set xpath="/items/item[@name='vehicleVMRustySedanPlaceable']/effect_group[@name='vehicleVMRustySedanPlaceable']/passive_effect[@name='DegradationMax']/@value">10000</set>
+	<append xpath="/items/item[@name='vehicleVMRustySedanPlaceable']/effect_group[@name='vehicleVMRustySedanPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- Rusted Taxi | HP: 8000 → 10000 -->
+	<set xpath="/items/item[@name='vehicleVMTaxiRustedPlaceable']/effect_group[@name='vehicleVMTaxiRustedPlaceable']/passive_effect[@name='DegradationMax']/@value">10000</set>
+	<append xpath="/items/item[@name='vehicleVMTaxiRustedPlaceable']/effect_group[@name='vehicleVMTaxiRustedPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- BMW Red | HP: 8500 → 10600 -->
+	<set xpath="/items/item[@name='vehicleVMBMWredPlaceable']/effect_group[@name='vehicleVMBMWredPlaceable']/passive_effect[@name='DegradationMax']/@value">10600</set>
+	<append xpath="/items/item[@name='vehicleVMBMWredPlaceable']/effect_group[@name='vehicleVMBMWredPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- BMW White | HP: 8500 → 10600 -->
+	<set xpath="/items/item[@name='vehicleVMBMWwhitePlaceable']/effect_group[@name='vehicleVMBMWwhitePlaceable']/passive_effect[@name='DegradationMax']/@value">10600</set>
+	<append xpath="/items/item[@name='vehicleVMBMWwhitePlaceable']/effect_group[@name='vehicleVMBMWwhitePlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- Hot Rod | HP: 9100 → 11400 -->
+	<set xpath="/items/item[@name='vehicleVMHotRodPlaceable']/effect_group[@name='vehicleVMHotRodPlaceable']/passive_effect[@name='DegradationMax']/@value">11400</set>
+	<append xpath="/items/item[@name='vehicleVMHotRodPlaceable']/effect_group[@name='vehicleVMHotRodPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- Beetle | HP: 8500 → 10600 -->
+	<set xpath="/items/item[@name='vehicleVMBeetlePlaceable']/effect_group[@name='vehicleVMBeetlePlaceable']/passive_effect[@name='DegradationMax']/@value">10600</set>
+	<append xpath="/items/item[@name='vehicleVMBeetlePlaceable']/effect_group[@name='vehicleVMBeetlePlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- Sedan Cutlass | HP: 8500 → 10600 -->
+	<set xpath="/items/item[@name='vehicleVMSedanCutlasPlaceable']/effect_group[@name='vehicleVMSedanCutlasPlaceable']/passive_effect[@name='DegradationMax']/@value">10600</set>
+	<append xpath="/items/item[@name='vehicleVMSedanCutlasPlaceable']/effect_group[@name='vehicleVMSedanCutlasPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- Sedan Fairlane | HP: 8500 → 10600 -->
+	<set xpath="/items/item[@name='vehicleVMSedanFairHPlaceable']/effect_group[@name='vehicleVMSedanFairHPlaceable']/passive_effect[@name='DegradationMax']/@value">10600</set>
+	<append xpath="/items/item[@name='vehicleVMSedanFairHPlaceable']/effect_group[@name='vehicleVMSedanFairHPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- OldsMobile | HP: 8500 → 10600 -->
+	<set xpath="/items/item[@name='vehicleVMOldsMobilePlaceable']/effect_group[@name='vehicleVMOldsMobilePlaceable']/passive_effect[@name='DegradationMax']/@value">10600</set>
+	<append xpath="/items/item[@name='vehicleVMOldsMobilePlaceable']/effect_group[@name='vehicleVMOldsMobilePlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- Station Wagon | HP: 8500 → 10600 -->
+	<set xpath="/items/item[@name='vehicleVMStationWagonPlaceable']/effect_group[@name='vehicleVMStationWagonPlaceable']/passive_effect[@name='DegradationMax']/@value">10600</set>
+	<append xpath="/items/item[@name='vehicleVMStationWagonPlaceable']/effect_group[@name='vehicleVMStationWagonPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- Combi (VW Bus) | HP: 8500 → 10600 -->
+	<set xpath="/items/item[@name='vehicleVMCombiPlaceable']/effect_group[@name='vehicleVMCombiPlaceable']/passive_effect[@name='DegradationMax']/@value">10600</set>
+	<append xpath="/items/item[@name='vehicleVMCombiPlaceable']/effect_group[@name='vehicleVMCombiPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- Combi 2 | HP: 8500 → 10600 -->
+	<set xpath="/items/item[@name='vehicleVMCombi2Placeable']/effect_group[@name='vehicleVMCombi2Placeable']/passive_effect[@name='DegradationMax']/@value">10600</set>
+	<append xpath="/items/item[@name='vehicleVMCombi2Placeable']/effect_group[@name='vehicleVMCombi2Placeable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- Camaro | HP: 9000 → 11250 -->
+	<set xpath="/items/item[@name='vehicleVMCamaroPlaceable']/effect_group[@name='vehicleVMCamaroPlaceable']/passive_effect[@name='DegradationMax']/@value">11250</set>
+	<append xpath="/items/item[@name='vehicleVMCamaroPlaceable']/effect_group[@name='vehicleVMCamaroPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- Police Car | HP: 9000 → 11250 -->
+	<set xpath="/items/item[@name='vehicleVMPoliceCarPlaceable']/effect_group[@name='vehicleVMPoliceCarPlaceable']/passive_effect[@name='DegradationMax']/@value">11250</set>
+	<append xpath="/items/item[@name='vehicleVMPoliceCarPlaceable']/effect_group[@name='vehicleVMPoliceCarPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- Junker Mustang | HP: 9000 → 11250 -->
+	<set xpath="/items/item[@name='vehicleVMJunkerMustangPlaceable']/effect_group[@name='vehicleVMJunkerMustangPlaceable']/passive_effect[@name='DegradationMax']/@value">11250</set>
+	<append xpath="/items/item[@name='vehicleVMJunkerMustangPlaceable']/effect_group[@name='vehicleVMJunkerMustangPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- Van Red | HP: 9300 → 11600 -->
+	<set xpath="/items/item[@name='vehicleVMVanRedPlaceable']/effect_group[@name='vehicleVMVanRedPlaceable']/passive_effect[@name='DegradationMax']/@value">11600</set>
+	<append xpath="/items/item[@name='vehicleVMVanRedPlaceable']/effect_group[@name='vehicleVMVanRedPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- NPC Van | HP: 8500 → 10600 -->
+	<set xpath="/items/item[@name='vehicleVMNPCVanPlaceable']/effect_group[@name='vehicleVMNPCVanPlaceable']/passive_effect[@name='DegradationMax']/@value">10600</set>
+	<append xpath="/items/item[@name='vehicleVMNPCVanPlaceable']/effect_group[@name='vehicleVMNPCVanPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- Van 2 | HP: 8500 → 10600 -->
+	<set xpath="/items/item[@name='vehicleVMVan2Placeable']/effect_group[@name='vehicleVMVan2Placeable']/passive_effect[@name='DegradationMax']/@value">10600</set>
+	<append xpath="/items/item[@name='vehicleVMVan2Placeable']/effect_group[@name='vehicleVMVan2Placeable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- Small Pickup | HP: 8500 → 10600 -->
+	<set xpath="/items/item[@name='vehicleVMSmallPickUpPlaceable']/effect_group[@name='vehicleVMSmallPickUpPlaceable']/passive_effect[@name='DegradationMax']/@value">10600</set>
+	<append xpath="/items/item[@name='vehicleVMSmallPickUpPlaceable']/effect_group[@name='vehicleVMSmallPickUpPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- Jeep C | HP: 8500 → 10600 -->
+	<set xpath="/items/item[@name='vehicleVMJeepCPlaceable']/effect_group[@name='vehicleVMJeepCPlaceable']/passive_effect[@name='DegradationMax']/@value">10600</set>
+	<append xpath="/items/item[@name='vehicleVMJeepCPlaceable']/effect_group[@name='vehicleVMJeepCPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+
+	<!-- ============================================================ -->
+	<!--       VEHICLE MADNESS — Sport/Muscle (-40%)                  -->
+	<!-- ============================================================ -->
+
+	<!-- Pickup | HP: 9500 → 11900 -->
+	<set xpath="/items/item[@name='vehicleVMPickupPlaceable']/effect_group[@name='vehicleVMPickupPlaceable']/passive_effect[@name='DegradationMax']/@value">11900</set>
+	<append xpath="/items/item[@name='vehicleVMPickupPlaceable']/effect_group[@name='vehicleVMPickupPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- Crusader | HP: 9400 → 11750 -->
+	<set xpath="/items/item[@name='vehicleVMCrusaderPlaceable']/effect_group[@name='vehicleVMCrusaderPlaceable']/passive_effect[@name='DegradationMax']/@value">11750</set>
+	<append xpath="/items/item[@name='vehicleVMCrusaderPlaceable']/effect_group[@name='vehicleVMCrusaderPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- Malice | HP: 9500 → 11900 -->
+	<set xpath="/items/item[@name='vehicleVMMalicePlaceable']/effect_group[@name='vehicleVMMalicePlaceable']/passive_effect[@name='DegradationMax']/@value">11900</set>
+	<append xpath="/items/item[@name='vehicleVMMalicePlaceable']/effect_group[@name='vehicleVMMalicePlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- Turbo | HP: 9500 → 11900 -->
+	<set xpath="/items/item[@name='vehicleVMTurboPlaceable']/effect_group[@name='vehicleVMTurboPlaceable']/passive_effect[@name='DegradationMax']/@value">11900</set>
+	<append xpath="/items/item[@name='vehicleVMTurboPlaceable']/effect_group[@name='vehicleVMTurboPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- Veneno | HP: 9500 → 11900 -->
+	<set xpath="/items/item[@name='vehicleVMVenenoPlaceable']/effect_group[@name='vehicleVMVenenoPlaceable']/passive_effect[@name='DegradationMax']/@value">11900</set>
+	<append xpath="/items/item[@name='vehicleVMVenenoPlaceable']/effect_group[@name='vehicleVMVenenoPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- Skyline GTR | HP: 9500 → 11900 -->
+	<set xpath="/items/item[@name='vehicleVMSkylineGTRPlaceable']/effect_group[@name='vehicleVMSkylineGTRPlaceable']/passive_effect[@name='DegradationMax']/@value">11900</set>
+	<append xpath="/items/item[@name='vehicleVMSkylineGTRPlaceable']/effect_group[@name='vehicleVMSkylineGTRPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- Muscle Red | HP: 9500 → 11900 -->
+	<set xpath="/items/item[@name='vehicleVMMuscleRedPlaceable']/effect_group[@name='vehicleVMMuscleRedPlaceable']/passive_effect[@name='DegradationMax']/@value">11900</set>
+	<append xpath="/items/item[@name='vehicleVMMuscleRedPlaceable']/effect_group[@name='vehicleVMMuscleRedPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- Muscle 2 | HP: 9500 → 11900 -->
+	<set xpath="/items/item[@name='vehicleVMMuscle2Placeable']/effect_group[@name='vehicleVMMuscle2Placeable']/passive_effect[@name='DegradationMax']/@value">11900</set>
+	<append xpath="/items/item[@name='vehicleVMMuscle2Placeable']/effect_group[@name='vehicleVMMuscle2Placeable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- Evo Lancer | HP: 9700 → 12100 -->
+	<set xpath="/items/item[@name='vehicleVMEvoLancerPlaceable']/effect_group[@name='vehicleVMEvoLancerPlaceable']/passive_effect[@name='DegradationMax']/@value">12100</set>
+	<append xpath="/items/item[@name='vehicleVMEvoLancerPlaceable']/effect_group[@name='vehicleVMEvoLancerPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- Mustang Mach 1 | HP: 10000 → 12500 -->
+	<set xpath="/items/item[@name='vehicleVMMustangMach1Placeable']/effect_group[@name='vehicleVMMustangMach1Placeable']/passive_effect[@name='DegradationMax']/@value">12500</set>
+	<append xpath="/items/item[@name='vehicleVMMustangMach1Placeable']/effect_group[@name='vehicleVMMustangMach1Placeable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- Interceptor | HP: 10000 → 12500 -->
+	<set xpath="/items/item[@name='vehicleVMInterceptorPlaceable']/effect_group[@name='vehicleVMInterceptorPlaceable']/passive_effect[@name='DegradationMax']/@value">12500</set>
+	<append xpath="/items/item[@name='vehicleVMInterceptorPlaceable']/effect_group[@name='vehicleVMInterceptorPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- Explorer | HP: 10500 → 13100 -->
+	<set xpath="/items/item[@name='vehicleVMExplorerPlaceable']/effect_group[@name='vehicleVMExplorerPlaceable']/passive_effect[@name='DegradationMax']/@value">13100</set>
+	<append xpath="/items/item[@name='vehicleVMExplorerPlaceable']/effect_group[@name='vehicleVMExplorerPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- Buggy 2 | HP: 10500 → 13100 -->
+	<set xpath="/items/item[@name='vehicleVMBuggy2Placeable']/effect_group[@name='vehicleVMBuggy2Placeable']/passive_effect[@name='DegradationMax']/@value">13100</set>
+	<append xpath="/items/item[@name='vehicleVMBuggy2Placeable']/effect_group[@name='vehicleVMBuggy2Placeable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+
+	<!-- ============================================================ -->
+	<!--       VEHICLE MADNESS — Trucks/Heavy (-50%)                  -->
+	<!-- ============================================================ -->
+
+	<!-- Fastback | HP: 12000 → 15000 -->
+	<set xpath="/items/item[@name='vehicleVMFastbackPlaceable']/effect_group[@name='vehicleVMFastbackPlaceable']/passive_effect[@name='DegradationMax']/@value">15000</set>
+	<append xpath="/items/item[@name='vehicleVMFastbackPlaceable']/effect_group[@name='vehicleVMFastbackPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- Buggy | HP: 12000 → 15000 -->
+	<set xpath="/items/item[@name='vehicleVMBuggyPlaceable']/effect_group[@name='vehicleVMBuggyPlaceable']/passive_effect[@name='DegradationMax']/@value">15000</set>
+	<append xpath="/items/item[@name='vehicleVMBuggyPlaceable']/effect_group[@name='vehicleVMBuggyPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- Hunter | HP: 12000 → 15000 -->
+	<set xpath="/items/item[@name='vehicleVMHunterPlaceable']/effect_group[@name='vehicleVMHunterPlaceable']/passive_effect[@name='DegradationMax']/@value">15000</set>
+	<append xpath="/items/item[@name='vehicleVMHunterPlaceable']/effect_group[@name='vehicleVMHunterPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- Spiker | HP: 11500 → 14400 -->
+	<set xpath="/items/item[@name='vehicleVMSpikerPlaceable']/effect_group[@name='vehicleVMSpikerPlaceable']/passive_effect[@name='DegradationMax']/@value">14400</set>
+	<append xpath="/items/item[@name='vehicleVMSpikerPlaceable']/effect_group[@name='vehicleVMSpikerPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- RV | HP: 11500 → 14400 -->
+	<set xpath="/items/item[@name='vehicleVMRVPlaceable']/effect_group[@name='vehicleVMRVPlaceable']/passive_effect[@name='DegradationMax']/@value">14400</set>
+	<append xpath="/items/item[@name='vehicleVMRVPlaceable']/effect_group[@name='vehicleVMRVPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- Flatbed | HP: 11500 → 14400 -->
+	<set xpath="/items/item[@name='vehicleVMFlatbedPlaceable']/effect_group[@name='vehicleVMFlatbedPlaceable']/passive_effect[@name='DegradationMax']/@value">14400</set>
+	<append xpath="/items/item[@name='vehicleVMFlatbedPlaceable']/effect_group[@name='vehicleVMFlatbedPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- Ambulance Damaged | HP: 11300 → 14100 -->
+	<set xpath="/items/item[@name='vehicleVMAmbulanceDamagedPlaceable']/effect_group[@name='vehicleVMAmbulanceDamagedPlaceable']/passive_effect[@name='DegradationMax']/@value">14100</set>
+	<append xpath="/items/item[@name='vehicleVMAmbulanceDamagedPlaceable']/effect_group[@name='vehicleVMAmbulanceDamagedPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- Box Truck | HP: 12200 → 15250 -->
+	<set xpath="/items/item[@name='vehicleVMBoxTruckPlaceable']/effect_group[@name='vehicleVMBoxTruckPlaceable']/passive_effect[@name='DegradationMax']/@value">15250</set>
+	<append xpath="/items/item[@name='vehicleVMBoxTruckPlaceable']/effect_group[@name='vehicleVMBoxTruckPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- Big Rig | HP: 12500 → 15600 -->
+	<set xpath="/items/item[@name='vehicleVMBigRigPlaceable']/effect_group[@name='vehicleVMBigRigPlaceable']/passive_effect[@name='DegradationMax']/@value">15600</set>
+	<append xpath="/items/item[@name='vehicleVMBigRigPlaceable']/effect_group[@name='vehicleVMBigRigPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- Big Rig 2 | HP: 12500 → 15600 -->
+	<set xpath="/items/item[@name='vehicleVMBigRig2Placeable']/effect_group[@name='vehicleVMBigRig2Placeable']/passive_effect[@name='DegradationMax']/@value">15600</set>
+	<append xpath="/items/item[@name='vehicleVMBigRig2Placeable']/effect_group[@name='vehicleVMBigRig2Placeable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- Apo Truck | HP: 13500 → 16900 -->
+	<set xpath="/items/item[@name='vehicleVMApoTruckPlaceable']/effect_group[@name='vehicleVMApoTruckPlaceable']/passive_effect[@name='DegradationMax']/@value">16900</set>
+	<append xpath="/items/item[@name='vehicleVMApoTruckPlaceable']/effect_group[@name='vehicleVMApoTruckPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- Truck Ambulance | HP: 13500 → 16900 -->
+	<set xpath="/items/item[@name='vehicleVMTruckAmbulancePlaceable']/effect_group[@name='vehicleVMTruckAmbulancePlaceable']/passive_effect[@name='DegradationMax']/@value">16900</set>
+	<append xpath="/items/item[@name='vehicleVMTruckAmbulancePlaceable']/effect_group[@name='vehicleVMTruckAmbulancePlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- Truck Mo Power | HP: 13500 → 16900 -->
+	<set xpath="/items/item[@name='vehicleVMTruckMoPowerPlaceable']/effect_group[@name='vehicleVMTruckMoPowerPlaceable']/passive_effect[@name='DegradationMax']/@value">16900</set>
+	<append xpath="/items/item[@name='vehicleVMTruckMoPowerPlaceable']/effect_group[@name='vehicleVMTruckMoPowerPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- Truck Working Stiffs | HP: 13500 → 16900 -->
+	<set xpath="/items/item[@name='vehicleVMTruckWorkingStiffsPlaceable']/effect_group[@name='vehicleVMTruckWorkingStiffsPlaceable']/passive_effect[@name='DegradationMax']/@value">16900</set>
+	<append xpath="/items/item[@name='vehicleVMTruckWorkingStiffsPlaceable']/effect_group[@name='vehicleVMTruckWorkingStiffsPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- Dumper Truck | HP: 14700 → 18400 -->
+	<set xpath="/items/item[@name='vehicleVMDumperTruckPlaceable']/effect_group[@name='vehicleVMDumperTruckPlaceable']/passive_effect[@name='DegradationMax']/@value">18400</set>
+	<append xpath="/items/item[@name='vehicleVMDumperTruckPlaceable']/effect_group[@name='vehicleVMDumperTruckPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- Old Semi | HP: 15500 → 19400 -->
+	<set xpath="/items/item[@name='vehicleVMOldSemiPlaceable']/effect_group[@name='vehicleVMOldSemiPlaceable']/passive_effect[@name='DegradationMax']/@value">19400</set>
+	<append xpath="/items/item[@name='vehicleVMOldSemiPlaceable']/effect_group[@name='vehicleVMOldSemiPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- Monster Pickup | HP: 15500 → 19400 -->
+	<set xpath="/items/item[@name='vehicleVMMonsterPickupPlaceable']/effect_group[@name='vehicleVMMonsterPickupPlaceable']/passive_effect[@name='DegradationMax']/@value">19400</set>
+	<append xpath="/items/item[@name='vehicleVMMonsterPickupPlaceable']/effect_group[@name='vehicleVMMonsterPickupPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- Monster Van | HP: 15500 → 19400 -->
+	<set xpath="/items/item[@name='vehicleVMMonsterVanPlaceable']/effect_group[@name='vehicleVMMonsterVanPlaceable']/passive_effect[@name='DegradationMax']/@value">19400</set>
+	<append xpath="/items/item[@name='vehicleVMMonsterVanPlaceable']/effect_group[@name='vehicleVMMonsterVanPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- Bus School | HP: 12500 → 15600 -->
+	<set xpath="/items/item[@name='vehicleVMBusSchoolPlaceable']/effect_group[@name='vehicleVMBusSchoolPlaceable']/passive_effect[@name='DegradationMax']/@value">15600</set>
+	<append xpath="/items/item[@name='vehicleVMBusSchoolPlaceable']/effect_group[@name='vehicleVMBusSchoolPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- Bus Shuttle | HP: 12500 → 15600 -->
+	<set xpath="/items/item[@name='vehicleVMBusShuttlePlaceable']/effect_group[@name='vehicleVMBusShuttlePlaceable']/passive_effect[@name='DegradationMax']/@value">15600</set>
+	<append xpath="/items/item[@name='vehicleVMBusShuttlePlaceable']/effect_group[@name='vehicleVMBusShuttlePlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- Bus City | HP: 12500 → 15600 -->
+	<set xpath="/items/item[@name='vehicleVMBusCityPlaceable']/effect_group[@name='vehicleVMBusCityPlaceable']/passive_effect[@name='DegradationMax']/@value">15600</set>
+	<append xpath="/items/item[@name='vehicleVMBusCityPlaceable']/effect_group[@name='vehicleVMBusCityPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+
+	<!-- ============================================================ -->
+	<!--       VEHICLE MADNESS — Military/Armored (-60%)              -->
+	<!-- ============================================================ -->
+
+	<!-- Tactical Jeep | HP: 16500 → 20600 -->
+	<set xpath="/items/item[@name='vehicleVMTacticalJeepPlaceable']/effect_group[@name='vehicleVMTacticalJeepPlaceable']/passive_effect[@name='DegradationMax']/@value">20600</set>
+	<append xpath="/items/item[@name='vehicleVMTacticalJeepPlaceable']/effect_group[@name='vehicleVMTacticalJeepPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.6" tags="vehicle"/>
+	</append>
+
+	<!-- Military HumVee | HP: 17900 → 22400 -->
+	<set xpath="/items/item[@name='vehicleVMMilitaryHumVeePlaceable']/effect_group[@name='vehicleVMMilitaryHumVeePlaceable']/passive_effect[@name='DegradationMax']/@value">22400</set>
+	<append xpath="/items/item[@name='vehicleVMMilitaryHumVeePlaceable']/effect_group[@name='vehicleVMMilitaryHumVeePlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.6" tags="vehicle"/>
+	</append>
+
+	<!-- Military Truck 2 | HP: 17500 → 21900 -->
+	<set xpath="/items/item[@name='vehicleVMMilitaryTruck2Placeable']/effect_group[@name='vehicleVMMilitaryTruck2Placeable']/passive_effect[@name='DegradationMax']/@value">21900</set>
+	<append xpath="/items/item[@name='vehicleVMMilitaryTruck2Placeable']/effect_group[@name='vehicleVMMilitaryTruck2Placeable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.6" tags="vehicle"/>
+	</append>
+
+	<!-- M3A Truck | HP: 19500 → 24400 -->
+	<set xpath="/items/item[@name='vehicleVMM3ATruckPlaceable']/effect_group[@name='vehicleVMM3ATruckPlaceable']/passive_effect[@name='DegradationMax']/@value">24400</set>
+	<append xpath="/items/item[@name='vehicleVMM3ATruckPlaceable']/effect_group[@name='vehicleVMM3ATruckPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.6" tags="vehicle"/>
+	</append>
+
+	<!-- Armored Cobra | HP: 20500 → 25600 -->
+	<set xpath="/items/item[@name='vehicleVMArmoredCobraPlaceable']/effect_group[@name='vehicleVMArmoredCobraPlaceable']/passive_effect[@name='DegradationMax']/@value">25600</set>
+	<append xpath="/items/item[@name='vehicleVMArmoredCobraPlaceable']/effect_group[@name='vehicleVMArmoredCobraPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.6" tags="vehicle"/>
+	</append>
+
+	<!-- Warthog | HP: 21400 → 26750 -->
+	<set xpath="/items/item[@name='vehicleVMWarthogPlaceable']/effect_group[@name='vehicleVMWarthogPlaceable']/passive_effect[@name='DegradationMax']/@value">26750</set>
+	<append xpath="/items/item[@name='vehicleVMWarthogPlaceable']/effect_group[@name='vehicleVMWarthogPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.6" tags="vehicle"/>
+	</append>
+
+	<!-- Military Truck | HP: 25100 → 31400 -->
+	<set xpath="/items/item[@name='vehicleVMMilitaryTruckPlaceable']/effect_group[@name='vehicleVMMilitaryTruckPlaceable']/passive_effect[@name='DegradationMax']/@value">31400</set>
+	<append xpath="/items/item[@name='vehicleVMMilitaryTruckPlaceable']/effect_group[@name='vehicleVMMilitaryTruckPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.6" tags="vehicle"/>
+	</append>
+
+	<!-- Striker | HP: 35000 → 43750 -->
+	<set xpath="/items/item[@name='vehicleVMStrikerPlaceable']/effect_group[@name='vehicleVMStrikerPlaceable']/passive_effect[@name='DegradationMax']/@value">43750</set>
+	<append xpath="/items/item[@name='vehicleVMStrikerPlaceable']/effect_group[@name='vehicleVMStrikerPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.6" tags="vehicle"/>
+	</append>
+
+
+	<!-- ============================================================ -->
+	<!--                                                              -->
+	<!--                     WITOS VEHICLES                           -->
+	<!--                    (by Witos / WitosMM)                      -->
+	<!--       effect_group names vary per mod — verified from XML    -->
+	<!--                                                              -->
+	<!-- ============================================================ -->
+
+
+	<!-- ============================================================ -->
+	<!--       WITOS — Bicycles/BMX (-15%)                            -->
+	<!-- ============================================================ -->
+
+	<!-- Tricycle | HP: 1000 → 1300 -->
+	<set xpath="/items/item[@name='vehicletricyclePlaceable']/effect_group[@name='vehicleBicyclePlaceable']/passive_effect[@name='DegradationMax']/@value">1300</set>
+	<append xpath="/items/item[@name='vehicletricyclePlaceable']/effect_group[@name='vehicleBicyclePlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.15" tags="vehicle"/>
+	</append>
+
+	<!-- BMX | HP: 1500 → 2000 -->
+	<set xpath="/items/item[@name='vehicleBMXPlaceable']/effect_group[@name='vehicleBicyclePlaceable']/passive_effect[@name='DegradationMax']/@value">2000</set>
+	<append xpath="/items/item[@name='vehicleBMXPlaceable']/effect_group[@name='vehicleBicyclePlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.15" tags="vehicle"/>
+	</append>
+
+	<!-- BMX ET | HP: 1500 → 2000 -->
+	<set xpath="/items/item[@name='vehicleBMXETPlaceable']/effect_group[@name='vehicleBicyclePlaceable']/passive_effect[@name='DegradationMax']/@value">2000</set>
+	<append xpath="/items/item[@name='vehicleBMXETPlaceable']/effect_group[@name='vehicleBicyclePlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.15" tags="vehicle"/>
+	</append>
+
+
+	<!-- ============================================================ -->
+	<!--       WITOS — Motorcycles/Snowmobile (-35%)                  -->
+	<!-- ============================================================ -->
+
+	<!-- Naked | HP: 5500 → 7000 -->
+	<set xpath="/items/item[@name='vehicleNakedPlaceable']/effect_group[@name='vehicleMotorcyclePlaceable']/passive_effect[@name='DegradationMax']/@value">7000</set>
+	<append xpath="/items/item[@name='vehicleNakedPlaceable']/effect_group[@name='vehicleMotorcyclePlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.35" tags="vehicle"/>
+	</append>
+
+	<!-- KTM | HP: 5500 → 7000 -->
+	<set xpath="/items/item[@name='vehicleKTMPlaceable']/effect_group[@name='vehicleMotorcyclePlaceable']/passive_effect[@name='DegradationMax']/@value">7000</set>
+	<append xpath="/items/item[@name='vehicleKTMPlaceable']/effect_group[@name='vehicleMotorcyclePlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.35" tags="vehicle"/>
+	</append>
+
+	<!-- SuperMoto | HP: 5500 → 7000 -->
+	<set xpath="/items/item[@name='vehicleSuperMotoPlaceable']/effect_group[@name='vehicleMotorcyclePlaceable']/passive_effect[@name='DegradationMax']/@value">7000</set>
+	<append xpath="/items/item[@name='vehicleSuperMotoPlaceable']/effect_group[@name='vehicleMotorcyclePlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.35" tags="vehicle"/>
+	</append>
+
+	<!-- SnowMobile | HP: 5500 → 7000 -->
+	<set xpath="/items/item[@name='vehicleSnowMobilePlaceable']/effect_group[@name='vehicleMotorcyclePlaceable']/passive_effect[@name='DegradationMax']/@value">7000</set>
+	<append xpath="/items/item[@name='vehicleSnowMobilePlaceable']/effect_group[@name='vehicleMotorcyclePlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.35" tags="vehicle"/>
+	</append>
+
+
+	<!-- ============================================================ -->
+	<!--       WITOS — Vans/Cars (-40%)                               -->
+	<!-- ============================================================ -->
+
+	<!-- Corsa | HP: 8000 → 10000 -->
+	<set xpath="/items/item[@name='vehicleWitosCorsaPlaceable']/effect_group[@name='main']/passive_effect[@name='DegradationMax']/@value">10000</set>
+	<append xpath="/items/item[@name='vehicleWitosCorsaPlaceable']/effect_group[@name='main']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- Vans 0-13 | HP: 6000 → 7500 each -->
+	<set xpath="/items/item[@name='WitosVanplaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">7500</set>
+	<append xpath="/items/item[@name='WitosVanplaceable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+	<set xpath="/items/item[@name='WitosVan1placeable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">7500</set>
+	<append xpath="/items/item[@name='WitosVan1placeable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+	<set xpath="/items/item[@name='WitosVan2placeable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">7500</set>
+	<append xpath="/items/item[@name='WitosVan2placeable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+	<set xpath="/items/item[@name='WitosVan3placeable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">7500</set>
+	<append xpath="/items/item[@name='WitosVan3placeable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+	<set xpath="/items/item[@name='WitosVan4placeable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">7500</set>
+	<append xpath="/items/item[@name='WitosVan4placeable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+	<set xpath="/items/item[@name='WitosVan5placeable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">7500</set>
+	<append xpath="/items/item[@name='WitosVan5placeable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+	<set xpath="/items/item[@name='WitosVan6placeable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">7500</set>
+	<append xpath="/items/item[@name='WitosVan6placeable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+	<set xpath="/items/item[@name='WitosVan7placeable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">7500</set>
+	<append xpath="/items/item[@name='WitosVan7placeable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+	<set xpath="/items/item[@name='WitosVan8placeable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">7500</set>
+	<append xpath="/items/item[@name='WitosVan8placeable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+	<set xpath="/items/item[@name='WitosVan9placeable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">7500</set>
+	<append xpath="/items/item[@name='WitosVan9placeable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+	<set xpath="/items/item[@name='WitosVan10placeable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">7500</set>
+	<append xpath="/items/item[@name='WitosVan10placeable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+	<set xpath="/items/item[@name='WitosVan11placeable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">7500</set>
+	<append xpath="/items/item[@name='WitosVan11placeable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+	<set xpath="/items/item[@name='WitosVan12placeable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">7500</set>
+	<append xpath="/items/item[@name='WitosVan12placeable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+	<set xpath="/items/item[@name='WitosVan13placeable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">7500</set>
+	<append xpath="/items/item[@name='WitosVan13placeable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+
+	<!-- ============================================================ -->
+	<!--       WITOS — Boats/Watercraft (-30%)                        -->
+	<!-- ============================================================ -->
+
+	<!-- Wooden Boat | HP: 500 → 650 -->
+	<set xpath="/items/item[@name='WitoswoodenboatPlaceable']/effect_group[@name='WitosBoat1Placeable']/passive_effect[@name='DegradationMax']/@value">650</set>
+	<append xpath="/items/item[@name='WitoswoodenboatPlaceable']/effect_group[@name='WitosBoat1Placeable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.3" tags="vehicle"/>
+	</append>
+
+	<!-- Sailboat | HP: 5000 → 6500 -->
+	<set xpath="/items/item[@name='WitossailboatPlaceable']/effect_group[@name='WitosBoat1Placeable']/passive_effect[@name='DegradationMax']/@value">6500</set>
+	<append xpath="/items/item[@name='WitossailboatPlaceable']/effect_group[@name='WitosBoat1Placeable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.3" tags="vehicle"/>
+	</append>
+
+	<!-- Motorboat | HP: 5000 → 6500 -->
+	<set xpath="/items/item[@name='WitosmotorboatPlaceable']/effect_group[@name='WitosBoat1Placeable']/passive_effect[@name='DegradationMax']/@value">6500</set>
+	<append xpath="/items/item[@name='WitosmotorboatPlaceable']/effect_group[@name='WitosBoat1Placeable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.3" tags="vehicle"/>
+	</append>
+
+	<!-- CSB Boat | HP: 5000 → 6500 -->
+	<set xpath="/items/item[@name='WitosBoatCSBPlaceable']/effect_group[@name='WitosBoat1Placeable']/passive_effect[@name='DegradationMax']/@value">6500</set>
+	<append xpath="/items/item[@name='WitosBoatCSBPlaceable']/effect_group[@name='WitosBoat1Placeable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.3" tags="vehicle"/>
+	</append>
+
+	<!-- Bathtub Boat | HP: 5000 → 6500 -->
+	<set xpath="/items/item[@name='WitosBoatbathtubPlaceable']/effect_group[@name='WitosBoat1Placeable']/passive_effect[@name='DegradationMax']/@value">6500</set>
+	<append xpath="/items/item[@name='WitosBoatbathtubPlaceable']/effect_group[@name='WitosBoat1Placeable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.3" tags="vehicle"/>
+	</append>
+
+	<!-- Yacht | HP: 5000 → 6500 -->
+	<set xpath="/items/item[@name='WitosYachtPlaceable']/effect_group[@name='WitosYachtPlaceable']/passive_effect[@name='DegradationMax']/@value">6500</set>
+	<append xpath="/items/item[@name='WitosYachtPlaceable']/effect_group[@name='WitosYachtPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.3" tags="vehicle"/>
+	</append>
+
+	<!-- Yacht FR | HP: 5000 → 6500 -->
+	<set xpath="/items/item[@name='WitosYachtfrPlaceable']/effect_group[@name='WitosBoat1Placeable']/passive_effect[@name='DegradationMax']/@value">6500</set>
+	<append xpath="/items/item[@name='WitosYachtfrPlaceable']/effect_group[@name='WitosBoat1Placeable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.3" tags="vehicle"/>
+	</append>
+
+	<!-- Cargo Boat | HP: 5000 → 6500 -->
+	<set xpath="/items/item[@name='WitosCargoBoatPlaceable']/effect_group[@name='WitosCargoBoatPlaceable']/passive_effect[@name='DegradationMax']/@value">6500</set>
+	<append xpath="/items/item[@name='WitosCargoBoatPlaceable']/effect_group[@name='WitosCargoBoatPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.3" tags="vehicle"/>
+	</append>
+
+	<!-- Command Boat | HP: 10000 → 13000 -->
+	<set xpath="/items/item[@name='WitosComandoBoatPlaceable']/effect_group[@name='main']/passive_effect[@name='DegradationMax']/@value">13000</set>
+	<append xpath="/items/item[@name='WitosComandoBoatPlaceable']/effect_group[@name='main']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.3" tags="vehicle"/>
+	</append>
+
+	<!-- Hovercraft | HP: 5000 → 6500 -->
+	<set xpath="/items/item[@name='WitoshovercraftPlaceable']/effect_group[@name='WitoshovercraftPlaceable']/passive_effect[@name='DegradationMax']/@value">6500</set>
+	<append xpath="/items/item[@name='WitoshovercraftPlaceable']/effect_group[@name='WitoshovercraftPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.3" tags="vehicle"/>
+	</append>
+
+
+	<!-- ============================================================ -->
+	<!--       WITOS — Aircraft (-25%)                                -->
+	<!-- ============================================================ -->
+
+	<!-- Cessna | HP: 3500 → 4500 -->
+	<set xpath="/items/item[@name='Cessnaplaceable']/effect_group[@name='CesSnaplaceable']/passive_effect[@name='DegradationMax']/@value">4500</set>
+	<append xpath="/items/item[@name='Cessnaplaceable']/effect_group[@name='CesSnaplaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.25" tags="vehicle"/>
+	</append>
+
+	<!-- Cessna Sea | HP: 3500 → 4500 -->
+	<set xpath="/items/item[@name='CessnaSeaplaceable']/effect_group[@name='CessnaSeaplaceable']/passive_effect[@name='DegradationMax']/@value">4500</set>
+	<append xpath="/items/item[@name='CessnaSeaplaceable']/effect_group[@name='CessnaSeaplaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.25" tags="vehicle"/>
+	</append>
+
+	<!-- Airplane | HP: 3500 → 4500 -->
+	<set xpath="/items/item[@name='Airplaneplaceable']/effect_group[@name='Airplaneplaceable']/passive_effect[@name='DegradationMax']/@value">4500</set>
+	<append xpath="/items/item[@name='Airplaneplaceable']/effect_group[@name='Airplaneplaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.25" tags="vehicle"/>
+	</append>
+
+	<!-- Jetpack | HP: 3500 → 4500 -->
+	<set xpath="/items/item[@name='JetPackplaceable']/effect_group[@name='vehicleGyrocopterPlaceable']/passive_effect[@name='DegradationMax']/@value">4500</set>
+	<append xpath="/items/item[@name='JetPackplaceable']/effect_group[@name='vehicleGyrocopterPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.25" tags="vehicle"/>
+	</append>
+
+	<!-- Drone | HP: 5500 → 7000 -->
+	<set xpath="/items/item[@name='DRONEplaceable']/effect_group[@name='vehicleGyrocopterPlaceable']/passive_effect[@name='DegradationMax']/@value">7000</set>
+	<append xpath="/items/item[@name='DRONEplaceable']/effect_group[@name='vehicleGyrocopterPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.25" tags="vehicle"/>
+	</append>
+
+	<!-- Hoverbike | HP: 10000 → 12500 -->
+	<set xpath="/items/item[@name='HOVERBIKEplaceable']/effect_group[@name='vehicleGyrocopterPlaceable']/passive_effect[@name='DegradationMax']/@value">12500</set>
+	<append xpath="/items/item[@name='HOVERBIKEplaceable']/effect_group[@name='vehicleGyrocopterPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.25" tags="vehicle"/>
+	</append>
+
+	<!-- Hoverbike FLY | HP: 20000 → 25000 -->
+	<set xpath="/items/item[@name='HOVERBIKEFLYplaceable']/effect_group[@name='vehicleGyrocopterPlaceable']/passive_effect[@name='DegradationMax']/@value">25000</set>
+	<append xpath="/items/item[@name='HOVERBIKEFLYplaceable']/effect_group[@name='vehicleGyrocopterPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.25" tags="vehicle"/>
+	</append>
+
+	<!-- MH-6 Little Bird | HP: 8000 → 10000 -->
+	<set xpath="/items/item[@name='WitosMH6placeable']/effect_group[@name='WitosMH6placeable']/passive_effect[@name='DegradationMax']/@value">10000</set>
+	<append xpath="/items/item[@name='WitosMH6placeable']/effect_group[@name='WitosMH6placeable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.25" tags="vehicle"/>
+	</append>
+
+	<!-- MH-6 Medic | HP: 8000 → 10000 -->
+	<set xpath="/items/item[@name='WitosMH6Medicplaceable']/effect_group[@name='WitosMH6Medicplaceable']/passive_effect[@name='DegradationMax']/@value">10000</set>
+	<append xpath="/items/item[@name='WitosMH6Medicplaceable']/effect_group[@name='WitosMH6Medicplaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.25" tags="vehicle"/>
+	</append>
+
+	<!-- MH-6 Desert | HP: 8000 → 10000 -->
+	<set xpath="/items/item[@name='WitosMH6Desertplaceable']/effect_group[@name='WitosMH6Desertplaceable']/passive_effect[@name='DegradationMax']/@value">10000</set>
+	<append xpath="/items/item[@name='WitosMH6Desertplaceable']/effect_group[@name='WitosMH6Desertplaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.25" tags="vehicle"/>
+	</append>
+
+	<!-- Apache | HP: 10000 → 12500 -->
+	<set xpath="/items/item[@name='WitosApacheHelicopterPlaceable']/effect_group[@name='vehicleApacheHelicopterPlaceable']/passive_effect[@name='DegradationMax']/@value">12500</set>
+	<append xpath="/items/item[@name='WitosApacheHelicopterPlaceable']/effect_group[@name='vehicleApacheHelicopterPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.25" tags="vehicle"/>
+	</append>
+
+	<!-- CERC RAH-66 | HP: 10000 → 12500 -->
+	<set xpath="/items/item[@name='CERCRAH66HelicopterPlaceable']/effect_group[@name='vehicleApacheHelicopterPlaceable']/passive_effect[@name='DegradationMax']/@value">12500</set>
+	<append xpath="/items/item[@name='CERCRAH66HelicopterPlaceable']/effect_group[@name='vehicleApacheHelicopterPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.25" tags="vehicle"/>
+	</append>
+
+	<!-- CERC UH-60 | HP: 10000 → 12500 -->
+	<set xpath="/items/item[@name='CERCUH60HelicopterPlaceable']/effect_group[@name='vehicleApacheHelicopterPlaceable']/passive_effect[@name='DegradationMax']/@value">12500</set>
+	<append xpath="/items/item[@name='CERCUH60HelicopterPlaceable']/effect_group[@name='vehicleApacheHelicopterPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.25" tags="vehicle"/>
+	</append>
+
+	<!-- Osprey v1 | HP: 20000 → 25000 -->
+	<set xpath="/items/item[@name='WitosOspreyplaceable']/effect_group[@name='vehicleGyrocopterPlaceable']/passive_effect[@name='DegradationMax']/@value">25000</set>
+	<append xpath="/items/item[@name='WitosOspreyplaceable']/effect_group[@name='vehicleGyrocopterPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.25" tags="vehicle"/>
+	</append>
+
+	<!-- Osprey v2 | HP: 20000 → 25000 -->
+	<set xpath="/items/item[@name='WitosOspreyV2placeable']/effect_group[@name='WitosOspreyV2placeable']/passive_effect[@name='DegradationMax']/@value">25000</set>
+	<append xpath="/items/item[@name='WitosOspreyV2placeable']/effect_group[@name='WitosOspreyV2placeable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.25" tags="vehicle"/>
+	</append>
+
+	<!-- Black Panther | HP: 20000 → 25000 -->
+	<set xpath="/items/item[@name='WitosBlackpanterplaceable']/effect_group[@name='main']/passive_effect[@name='DegradationMax']/@value">25000</set>
+	<append xpath="/items/item[@name='WitosBlackpanterplaceable']/effect_group[@name='main']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.25" tags="vehicle"/>
+	</append>
+
+	<!-- CH-47 / GH | HP: 50000 → 62500 -->
+	<set xpath="/items/item[@name='WitosGHplaceable']/effect_group[@name='main']/passive_effect[@name='DegradationMax']/@value">62500</set>
+	<append xpath="/items/item[@name='WitosGHplaceable']/effect_group[@name='main']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.25" tags="vehicle"/>
+	</append>
+
+
+	<!-- ============================================================ -->
+	<!--       WITOS — Heavy/Military/Tanks (-60%)                    -->
+	<!-- ============================================================ -->
+
+	<!-- JLTV | HP: 50000 → 62500 -->
+	<set xpath="/items/item[@name='WitosRooJLTVPlaceable']/effect_group[@name='main']/passive_effect[@name='DegradationMax']/@value">62500</set>
+	<append xpath="/items/item[@name='WitosRooJLTVPlaceable']/effect_group[@name='main']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.6" tags="vehicle"/>
+	</append>
+
+	<!-- Crane | HP: 50000 → 62500 -->
+	<set xpath="/items/item[@name='vehicleCranePlaceable']/effect_group[@name='main']/passive_effect[@name='DegradationMax']/@value">62500</set>
+	<append xpath="/items/item[@name='vehicleCranePlaceable']/effect_group[@name='main']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.6" tags="vehicle"/>
+	</append>
+
+	<!-- Tank EV2 | HP: 50000 → 62500 -->
+	<set xpath="/items/item[@name='vehicleTankEV2Placeable']/effect_group[@name='main']/passive_effect[@name='DegradationMax']/@value">62500</set>
+	<append xpath="/items/item[@name='vehicleTankEV2Placeable']/effect_group[@name='main']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.6" tags="vehicle"/>
+	</append>
+
+	<!-- Tank KV-II | HP: 100000 → 125000 -->
+	<set xpath="/items/item[@name='vehicleTankKVIIPlaceable']/effect_group[@name='main']/passive_effect[@name='DegradationMax']/@value">125000</set>
+	<append xpath="/items/item[@name='vehicleTankKVIIPlaceable']/effect_group[@name='main']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.6" tags="vehicle"/>
+	</append>
+
+	<!-- Tank M1A2 Abrams | HP: 100000 → 125000 -->
+	<set xpath="/items/item[@name='vehicleTankM1A2Placeable']/effect_group[@name='main']/passive_effect[@name='DegradationMax']/@value">125000</set>
+	<append xpath="/items/item[@name='vehicleTankM1A2Placeable']/effect_group[@name='main']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.6" tags="vehicle"/>
 	</append>
 
 </configs>
