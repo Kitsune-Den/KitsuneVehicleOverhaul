@@ -1,6 +1,12 @@
-# Kitsune Vehicle Overhaul
+# KitsuneVehicleOverhaul
 
-![Kitsune Vehicle Overhaul](kitsune-overhaul.jpg)
+![KitsuneVehicleOverhaul](kitsune-overhaul.jpg)
+
+[![Download on Nexus Mods](https://img.shields.io/badge/Download-Nexus_Mods-da8e35?style=flat&logo=nexusmods&logoColor=white)](https://www.nexusmods.com/7daystodie/mods/10057)
+[![7 Days to Die V1.0+](https://img.shields.io/badge/7_Days_to_Die-V1.0%2B-8b0000?style=flat)](https://7daystodie.com)
+[![Vehicles Patched](https://img.shields.io/badge/vehicles_patched-163-orange?style=flat)](#supported-vehicles)
+[![License](https://img.shields.io/github/license/Kitsune-Den/KitsuneVehicleOverhaul?style=flat)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/Kitsune-Den/KitsuneVehicleOverhaul?style=flat&logo=github)](https://github.com/Kitsune-Den/KitsuneVehicleOverhaul/stargazers)
 
 **Your 4x4 truck weighs two tons. A cactus should not total it.**
 
