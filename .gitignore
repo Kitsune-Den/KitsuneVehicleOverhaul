@@ -1,0 +1,8 @@
+# Local Claude config
+.claude/settings.local.json
+
+# Firecrawl scratch
+.firecrawl/
+
+# Build artifacts (releases are uploaded to GitHub releases, not committed)
+KitsuneVehicleOverhaul-v*.zip

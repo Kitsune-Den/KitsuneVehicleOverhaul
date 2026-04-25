@@ -12,7 +12,7 @@
 
 Kitsune Vehicle Overhaul rebalances vehicle collision damage so driving through the desert doesn't feel like driving through a minefield. Cacti shatter on impact, heavier vehicles shrug off rough terrain, and you stop burning through repair kits every five minutes.
 
-Patches **163 vehicles** across vanilla, Bdub's Vehicles, Vehicle Madness, and Witos Vehicles. All optional — install the vehicle packs you want, the mod handles the rest. Server-side only — no client install needed.
+Patches **188 vehicles** across vanilla, Bdub's Vehicles, Vehicle Madness, Witos Vehicles, and Vehicle Additions. All optional. Install the vehicle packs you want, the mod handles the rest. Server-side only, no client install needed.
 
 ---
 
@@ -23,7 +23,7 @@ Patches **163 vehicles** across vanilla, Bdub's Vehicles, Vehicle Madness, and W
 The big saguaro cacti (the tall ones) were missing a `VehicleHitScale` property that the small cacti already had. This meant a 20-foot cactus hit your truck like a concrete wall. We fixed that.
 
 - **Small cacti** shatter instantly with zero damage (vanilla behavior, unchanged)
-- **Large saguaros** now shatter easily and leave a tiny scratch at most — enough to hear the "thunk," not enough to care about
+- **Large saguaros** now shatter easily and leave a tiny scratch at most. Enough to hear the "thunk," not enough to care about.
 
 ### Vehicle Damage Resistance
 
@@ -32,11 +32,11 @@ Every vehicle now has built-in collision resistance based on its weight class. T
 | Class | Vehicles | Damage Resistance |
 |-------|----------|-------------------|
 | Bicycle | Bicycle, BMX, Tricycle | -15% |
-| Light | Minibike, Golf Cart, Duster, Buggy | -25% to -30% |
-| Motorcycle | Motorcycle, Cruiser, Dirt Bike, Junker, Rat Bike, KTM, SuperMoto, SnowMobile | -35% |
+| Light | Minibike, Golf Cart, Duster, Buggy, Jalopies | -25% to -30% |
+| Motorcycle | Motorcycle, Cruiser, Dirt Bike, KTM, SuperMoto, SnowMobile | -35% |
 | Car / Van | Charger, GNX, Hot Rods, Sedans, BMWs, Vans, Corsa, Willy Jeep | -40% |
 | Boat | Sailboat, Motorboat, Yacht, Hovercraft, Cargo Boat | -30% |
-| Truck | 4x4, Box Trucks, Semi, Trophy Truck, Buses, RV, Monster Trucks | -50% |
+| Truck | 4x4, Box Trucks, Semi, Buses, RV, Monster Trucks, Industrial | -50% |
 | Military | BRDM-2, Humvee, LMTV, MRAP, JLTV, Striker, Tanks | -60% |
 | Aircraft | Gyrocopter, Cessna, Helicopters, Ospreys, Hoverbike, Jetpack | -25% |
 
@@ -44,17 +44,17 @@ Every vehicle now has built-in collision resistance based on its weight class. T
 
 ### HP Buffs
 
-All vehicles get a modest ~25% HP increase as a secondary buffer. This is intentionally small — the damage resistance does the heavy lifting, and we didn't want to inflate repair kit costs.
+All vehicles get a modest ~25% HP increase as a secondary buffer. This is intentionally small. The damage resistance does the heavy lifting, and we didn't want to inflate repair kit costs.
 
 ### Repairing
 
-Repair kits work the same as vanilla. Each kit restores a flat 1,000 HP plus a percentage bonus from Intellect Mastery. Because the HP buffs are modest, you'll need at most 1-2 extra kits compared to vanilla on a full repair from zero — and since you're taking less damage in the first place, you'll repair less often overall.
+Repair kits work the same as vanilla. Each kit restores a flat 1,000 HP plus a percentage bonus from Intellect Mastery. Because the HP buffs are modest, you'll need at most 1-2 extra kits compared to vanilla on a full repair from zero. Since you're taking less damage in the first place, you'll repair less often overall.
 
 ---
 
 ## Supported Vehicles
 
-**163 vehicles total** across 4 mod packs (all optional except vanilla):
+**188 vehicles total** across 5 mod packs (all optional except vanilla):
 
 ### Vanilla (5)
 Bicycle, Minibike, Motorcycle, 4x4 Truck, Gyrocopter
@@ -83,25 +83,34 @@ Bicycle, Minibike, Motorcycle, 4x4 Truck, Gyrocopter
 - **Aircraft (17):** Cessna (x2), Airplane, Jetpack, Drone, Hoverbike (x2), MH-6 (x3), Apache, RAH-66, UH-60, Ospreys (x3), Black Panther, CH-47
 - **Heavy/Military (5):** JLTV, Crane, Tank EV2, Tank KV-II, Tank M1A2 Abrams
 
+### Vehicle Additions (25) — *supported, not required*
+- **Jalopies (3):** Jalopy Sedan, Jalopy SUV, Jalopy Pickup (the 500 HP junkers)
+- **Motorcycle (1):** VA Motorcycle
+- **Cars/Vans (7):** Sedan, PT Working Stiff, Police Car, SUV, Minivan, Towncar, Pickup
+- **Trucks/Industrial (10):** Forklift, Army Truck, Farm Truck, PT (Generic/Mo Power/Ambulance), Tractor, Backhoe, Semi Truck, Fire Truck
+- **Buses (4):** Small/Large City + School Buses
+
 ---
 
 ## Installation
 
-Drop the `Kitsune Vehicle Overhaul` folder into your game's `Mods/` directory:
+Drop the `zz_Kitsune Vehicle Overhaul` folder into your game's `Mods/` directory:
 
 ```
 7 Days To Die/
   Mods/
-    Kitsune Vehicle Overhaul/
+    zz_Kitsune Vehicle Overhaul/
       ModInfo.xml
       Config/
         items.xml
         blocks.xml
 ```
 
-**Server-side only.** Clients don't need to install anything — configs are sent on connect.
+> **Why "zz_" prefix?** 7 Days to Die loads mods alphabetically and applies XPath patches in that order. The `zz_` prefix ensures this mod loads **after** all vehicle packs, so all vehicle items exist when our patches run. Without the prefix, vehicles from packs starting with letters after "K" (Vehicle Madness, Witos, etc.) wouldn't get patched.
 
-> **Note:** You may see XPath warnings in the log for vehicle packs you don't have installed (e.g., `Could not find node for xpath` referencing Witos or Vehicle Madness items). These are harmless — the game simply skips patches for vehicles that don't exist. Your log will be clean if you have all supported packs installed.
+**Server-side only.** Clients don't need to install anything. Configs are sent on connect.
+
+> **Note:** You may see XPath warnings in the log for vehicle packs you don't have installed. These are harmless. The game simply skips patches for vehicles that don't exist.
 
 ---
 
@@ -111,6 +120,7 @@ Drop the `Kitsune Vehicle Overhaul` folder into your game's `Mods/` directory:
 - **Bdub's Vehicles** — full support (optional)
 - **Vehicle Madness** — full support (optional)
 - **Witos Vehicles** — full support, requires WitosRoot (optional)
+- **Vehicle Additions** — full support (optional)
 - **Vehicle Armor Mod / Vehicle Plow Mod** — stacks cleanly (those use `VehicleStrongSelfDamage`, we use `VehicleSelfDamage`)
 - **Grease Monkey / Intellect Mastery perks** — stacks additively as intended
 - **Other vehicle mods** — no conflicts, but unpatched vehicles won't receive buffs
@@ -145,3 +155,4 @@ hp_per_kit = 1000 + (max_health * intellect_mastery_rank * 0.1)
 - **Ragsy / Guppycur** — Vehicle Madness
 - **Witos** — Witos Vehicles + WitosRoot
 - **The Fun Pimps** — 7 Days to Die
+- **SwiftPlays** — Catching the load order bug in v1.1.0

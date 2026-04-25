@@ -9,7 +9,7 @@
 	Self-damage formula: raw × EffectSelfDamagePer
 	Grease Monkey already gives -20% per rank. Our values stack additively.
 
-	Supports: Vanilla + Bdub's Vehicles + Vehicle Madness + Witos Vehicles
+	Supports: Vanilla + Bdub's Vehicles + Vehicle Madness + Witos Vehicles + Vehicle Additions
 -->
 <configs>
 
@@ -1095,6 +1095,189 @@
 	<set xpath="/items/item[@name='vehicleTankM1A2Placeable']/effect_group[@name='main']/passive_effect[@name='DegradationMax']/@value">125000</set>
 	<append xpath="/items/item[@name='vehicleTankM1A2Placeable']/effect_group[@name='main']">
 		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.6" tags="vehicle"/>
+	</append>
+
+
+	<!-- ============================================================ -->
+	<!--                                                              -->
+	<!--                   VEHICLE ADDITIONS                          -->
+	<!--                                                              -->
+	<!-- ============================================================ -->
+
+
+	<!-- ============================================================ -->
+	<!--       VEHICLE ADDITIONS — Jalopies (-25%)                    -->
+	<!--       Junk-frame broken-down vehicles, low HP intentional    -->
+	<!-- ============================================================ -->
+
+	<!-- Jalopy Sedan | HP: 500 → 650 -->
+	<set xpath="/items/item[@name='vehicleVAJalopySedanPlaceable']/effect_group[@name='vehicleVAJalopySedanPlaceable']/passive_effect[@name='DegradationMax']/@value">650</set>
+	<append xpath="/items/item[@name='vehicleVAJalopySedanPlaceable']/effect_group[@name='vehicleVAJalopySedanPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.25" tags="vehicle"/>
+	</append>
+
+	<!-- Jalopy SUV | HP: 500 → 650 -->
+	<set xpath="/items/item[@name='vehicleVAJalopySUVPlaceable']/effect_group[@name='vehicleVAJalopySUVPlaceable']/passive_effect[@name='DegradationMax']/@value">650</set>
+	<append xpath="/items/item[@name='vehicleVAJalopySUVPlaceable']/effect_group[@name='vehicleVAJalopySUVPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.25" tags="vehicle"/>
+	</append>
+
+	<!-- Jalopy Pickup | HP: 500 → 650 -->
+	<set xpath="/items/item[@name='vehicleVAJalopyPickupPlaceable']/effect_group[@name='vehicleVAJalopyPickupPlaceable']/passive_effect[@name='DegradationMax']/@value">650</set>
+	<append xpath="/items/item[@name='vehicleVAJalopyPickupPlaceable']/effect_group[@name='vehicleVAJalopyPickupPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.25" tags="vehicle"/>
+	</append>
+
+
+	<!-- ============================================================ -->
+	<!--       VEHICLE ADDITIONS — Motorcycle (-35%)                  -->
+	<!-- ============================================================ -->
+
+	<!-- VA Motorcycle | HP: 4000 → 5500 -->
+	<set xpath="/items/item[@name='vehicleVAMotorcyclePlaceable']/effect_group[@name='vehicleMotorcyclePlaceable']/passive_effect[@name='DegradationMax']/@value">5500</set>
+	<append xpath="/items/item[@name='vehicleVAMotorcyclePlaceable']/effect_group[@name='vehicleMotorcyclePlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.35" tags="vehicle"/>
+	</append>
+
+
+	<!-- ============================================================ -->
+	<!--       VEHICLE ADDITIONS — Cars/Vans/SUVs (-40%)              -->
+	<!-- ============================================================ -->
+
+	<!-- Sedan | HP: 7500 → 9400 -->
+	<set xpath="/items/item[@name='vehicleVASedanPlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">9400</set>
+	<append xpath="/items/item[@name='vehicleVASedanPlaceable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- PT Working Stiff | HP: 7500 → 9400 -->
+	<set xpath="/items/item[@name='vehicleVAPTWorkingStiffPlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">9400</set>
+	<append xpath="/items/item[@name='vehicleVAPTWorkingStiffPlaceable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- Police Car | HP: 8000 → 10000 -->
+	<set xpath="/items/item[@name='vehicleVAPoliceCarPlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">10000</set>
+	<append xpath="/items/item[@name='vehicleVAPoliceCarPlaceable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- SUV | HP: 8000 → 10000 -->
+	<set xpath="/items/item[@name='vehicleVASUVPlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">10000</set>
+	<append xpath="/items/item[@name='vehicleVASUVPlaceable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- Minivan | HP: 8000 → 10000 -->
+	<set xpath="/items/item[@name='vehicleVAMinivanPlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">10000</set>
+	<append xpath="/items/item[@name='vehicleVAMinivanPlaceable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- Towncar | HP: 8000 → 10000 -->
+	<set xpath="/items/item[@name='vehicleVATowncarPlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">10000</set>
+	<append xpath="/items/item[@name='vehicleVATowncarPlaceable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+	<!-- Pickup | HP: 8500 → 10600 -->
+	<set xpath="/items/item[@name='vehicleVAPickupPlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">10600</set>
+	<append xpath="/items/item[@name='vehicleVAPickupPlaceable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+
+	<!-- ============================================================ -->
+	<!--       VEHICLE ADDITIONS — Trucks/Industrial (-50%)           -->
+	<!-- ============================================================ -->
+
+	<!-- Forklift | HP: 8500 → 10600 -->
+	<set xpath="/items/item[@name='vehicleVAForkliftPlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">10600</set>
+	<append xpath="/items/item[@name='vehicleVAForkliftPlaceable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- Army Truck | HP: 9000 → 11250 -->
+	<set xpath="/items/item[@name='vehicleVAArmyTruckPlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">11250</set>
+	<append xpath="/items/item[@name='vehicleVAArmyTruckPlaceable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- Farm Truck | HP: 9000 → 11250 -->
+	<set xpath="/items/item[@name='vehicleVAFarmTruckPlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">11250</set>
+	<append xpath="/items/item[@name='vehicleVAFarmTruckPlaceable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- PT Generic | HP: 9000 → 11250 -->
+	<set xpath="/items/item[@name='vehicleVAPTGenericPlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">11250</set>
+	<append xpath="/items/item[@name='vehicleVAPTGenericPlaceable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- PT Mo Power | HP: 9000 → 11250 -->
+	<set xpath="/items/item[@name='vehicleVAPTMoPowerPlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">11250</set>
+	<append xpath="/items/item[@name='vehicleVAPTMoPowerPlaceable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- PT Ambulance | HP: 9000 → 11250 -->
+	<set xpath="/items/item[@name='vehicleVAPTAmbulancePlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">11250</set>
+	<append xpath="/items/item[@name='vehicleVAPTAmbulancePlaceable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- Tractor | HP: 9500 → 11900 -->
+	<set xpath="/items/item[@name='vehicleVATractorPlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">11900</set>
+	<append xpath="/items/item[@name='vehicleVATractorPlaceable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- Backhoe | HP: 9500 → 11900 -->
+	<set xpath="/items/item[@name='vehicleVABackhoePlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">11900</set>
+	<append xpath="/items/item[@name='vehicleVABackhoePlaceable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- Semi Truck | HP: 10000 → 12500 -->
+	<set xpath="/items/item[@name='vehicleVASemiTruckPlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">12500</set>
+	<append xpath="/items/item[@name='vehicleVASemiTruckPlaceable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- Fire Truck | HP: 10000 → 12500 -->
+	<set xpath="/items/item[@name='vehicleVAFireTruckPlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">12500</set>
+	<append xpath="/items/item[@name='vehicleVAFireTruckPlaceable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+
+	<!-- ============================================================ -->
+	<!--       VEHICLE ADDITIONS — Buses (-50%)                       -->
+	<!-- ============================================================ -->
+
+	<!-- Small City Bus | HP: 9500 → 11900 -->
+	<set xpath="/items/item[@name='vehicleVABusSmallCityPlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">11900</set>
+	<append xpath="/items/item[@name='vehicleVABusSmallCityPlaceable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- Small School Bus | HP: 9500 → 11900 -->
+	<set xpath="/items/item[@name='vehicleVABusSmallSchoolPlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">11900</set>
+	<append xpath="/items/item[@name='vehicleVABusSmallSchoolPlaceable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- Large City Bus | HP: 10500 → 13100 -->
+	<set xpath="/items/item[@name='vehicleVABusLargeCityPlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">13100</set>
+	<append xpath="/items/item[@name='vehicleVABusLargeCityPlaceable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- Large School Bus | HP: 10500 → 13100 -->
+	<set xpath="/items/item[@name='vehicleVABusLargeSchoolPlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">13100</set>
+	<append xpath="/items/item[@name='vehicleVABusLargeSchoolPlaceable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
 	</append>
 
 </configs>
