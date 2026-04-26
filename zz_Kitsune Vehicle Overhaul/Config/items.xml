@@ -9,7 +9,7 @@
 	Self-damage formula: raw × EffectSelfDamagePer
 	Grease Monkey already gives -20% per rank. Our values stack additively.
 
-	Supports: Vanilla + Bdub's Vehicles + Vehicle Madness + Witos Vehicles + Vehicle Additions
+	Supports: Vanilla + Bdub's Vehicles + Vehicle Madness + Witos Vehicles + Vehicle Additions + LittleRedSonja Vehicles
 -->
 <configs>
 
@@ -1277,6 +1277,117 @@
 	<!-- Large School Bus | HP: 10500 → 13100 -->
 	<set xpath="/items/item[@name='vehicleVABusLargeSchoolPlaceable']/effect_group[@name='Base Effects']/passive_effect[@name='DegradationMax']/@value">13100</set>
 	<append xpath="/items/item[@name='vehicleVABusLargeSchoolPlaceable']/effect_group[@name='Base Effects']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+
+	<!-- ============================================================ -->
+	<!--                                                              -->
+	<!--                LITTLE RED SONJA VEHICLES                     -->
+	<!--                                                              -->
+	<!-- ============================================================ -->
+
+
+	<!-- ============================================================ -->
+	<!--       LRS — Cars (-40%)                                      -->
+	<!-- ============================================================ -->
+
+	<!-- Pink Corvette | HP: 7000 → 8750 -->
+	<set xpath="/items/item[@name='vehicleSonjaPinkCorvettePlaceable']/effect_group[@name='main']/passive_effect[@name='DegradationMax']/@value">8750</set>
+	<append xpath="/items/item[@name='vehicleSonjaPinkCorvettePlaceable']/effect_group[@name='main']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.4" tags="vehicle"/>
+	</append>
+
+
+	<!-- ============================================================ -->
+	<!--       LRS — Motorcycles (-35%)                               -->
+	<!-- ============================================================ -->
+
+	<!-- Barbie Davidson | HP: 8000 → 10000 -->
+	<set xpath="/items/item[@name='vehicleSonjaBarbieDavidsonMotorcyclePlaceable']/effect_group[@name='vehicleSonjaArmyTruckPlaceable']/passive_effect[@name='DegradationMax']/@value">10000</set>
+	<append xpath="/items/item[@name='vehicleSonjaBarbieDavidsonMotorcyclePlaceable']/effect_group[@name='vehicleSonjaArmyTruckPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.35" tags="vehicle"/>
+	</append>
+
+	<!-- Boring Davidson | HP: 8000 → 10000 -->
+	<set xpath="/items/item[@name='vehicleSonjaBoringDavidsonMotorcyclePlaceable']/effect_group[@name='vehicleSonjaArmyTruckPlaceable']/passive_effect[@name='DegradationMax']/@value">10000</set>
+	<append xpath="/items/item[@name='vehicleSonjaBoringDavidsonMotorcyclePlaceable']/effect_group[@name='vehicleSonjaArmyTruckPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.35" tags="vehicle"/>
+	</append>
+
+	<!-- Barbie Davidson NS | HP: 8000 → 10000 -->
+	<set xpath="/items/item[@name='vehicleSonjaBarbieDavidsonMotorcycleNSPlaceable']/effect_group[@name='vehicleSonjaArmyTruckPlaceable']/passive_effect[@name='DegradationMax']/@value">10000</set>
+	<append xpath="/items/item[@name='vehicleSonjaBarbieDavidsonMotorcycleNSPlaceable']/effect_group[@name='vehicleSonjaArmyTruckPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.35" tags="vehicle"/>
+	</append>
+
+	<!-- Boring Davidson NS | HP: 8000 → 10000 -->
+	<set xpath="/items/item[@name='vehicleSonjaBoringDavidsonMotorcycleNSPlaceable']/effect_group[@name='vehicleSonjaArmyTruckPlaceable']/passive_effect[@name='DegradationMax']/@value">10000</set>
+	<append xpath="/items/item[@name='vehicleSonjaBoringDavidsonMotorcycleNSPlaceable']/effect_group[@name='vehicleSonjaArmyTruckPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.35" tags="vehicle"/>
+	</append>
+
+
+	<!-- ============================================================ -->
+	<!--       LRS — Aircraft / Hover (-25%)                          -->
+	<!-- ============================================================ -->
+
+	<!-- Flying Magic Broom | HP: 7500 → 9400 -->
+	<set xpath="/items/item[@name='vehicleSonjaFlyingFancyBroomPlaceable']/effect_group[@name='vehicleSonjaFlyingFancyBroomPlaceable']/passive_effect[@name='DegradationMax']/@value">9400</set>
+	<append xpath="/items/item[@name='vehicleSonjaFlyingFancyBroomPlaceable']/effect_group[@name='vehicleSonjaFlyingFancyBroomPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.25" tags="vehicle"/>
+	</append>
+
+	<!-- StarWars Speeder Bike | HP: 10000 → 12500 -->
+	<set xpath="/items/item[@name='vehicleSonjaSWSpeederBikePlaceable']/effect_group[@name='vehicleSonjaSWSpeederBikePlaceable']/passive_effect[@name='DegradationMax']/@value">12500</set>
+	<append xpath="/items/item[@name='vehicleSonjaSWSpeederBikePlaceable']/effect_group[@name='vehicleSonjaSWSpeederBikePlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.25" tags="vehicle"/>
+	</append>
+
+	<!-- StarWars Speeder Bike Paintable | HP: 10000 → 12500 -->
+	<set xpath="/items/item[@name='vehicleSonjaSWSpeederBikePaintablePlaceable']/effect_group[@name='vehicleSonjaSWSpeederBikePlaceable']/passive_effect[@name='DegradationMax']/@value">12500</set>
+	<append xpath="/items/item[@name='vehicleSonjaSWSpeederBikePaintablePlaceable']/effect_group[@name='vehicleSonjaSWSpeederBikePlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.25" tags="vehicle"/>
+	</append>
+
+
+	<!-- ============================================================ -->
+	<!--       LRS — Trucks / Heavy (-50%)                            -->
+	<!-- ============================================================ -->
+
+	<!-- Farmer Sage Tractor | HP: 9000 → 11250 -->
+	<set xpath="/items/item[@name='vehicleSonjaFarmerSageTractorPlaceable']/effect_group[@name='vehicleSonjaFarmerSageTractorPlaceable']/passive_effect[@name='DegradationMax']/@value">11250</set>
+	<append xpath="/items/item[@name='vehicleSonjaFarmerSageTractorPlaceable']/effect_group[@name='vehicleSonjaFarmerSageTractorPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- Farmer Sage Tractor Grey | HP: 9000 → 11250 -->
+	<set xpath="/items/item[@name='vehicleSonjaFarmerSageTractorGreyPlaceable']/effect_group[@name='vehicleSonjaFarmerSageTractorPlaceable']/passive_effect[@name='DegradationMax']/@value">11250</set>
+	<append xpath="/items/item[@name='vehicleSonjaFarmerSageTractorGreyPlaceable']/effect_group[@name='vehicleSonjaFarmerSageTractorPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- Army Truck | HP: 10000 → 12500 -->
+	<set xpath="/items/item[@name='vehicleSonjaArmyTruckPlaceable']/effect_group[@name='vehicleSonjaArmyTruckPlaceable']/passive_effect[@name='DegradationMax']/@value">12500</set>
+	<append xpath="/items/item[@name='vehicleSonjaArmyTruckPlaceable']/effect_group[@name='vehicleSonjaArmyTruckPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- Army Truck Dyes | HP: 10000 → 12500 -->
+	<set xpath="/items/item[@name='vehicleSonjaArmyTruck_DyesPlaceable']/effect_group[@name='vehicleSonjaArmyTruckPlaceable']/passive_effect[@name='DegradationMax']/@value">12500</set>
+	<append xpath="/items/item[@name='vehicleSonjaArmyTruck_DyesPlaceable']/effect_group[@name='vehicleSonjaArmyTruckPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- Army Truck NL | HP: 10000 → 12500 -->
+	<set xpath="/items/item[@name='vehicleSonjaArmyTruck_NLPlaceable']/effect_group[@name='vehicleSonjaArmyTruckPlaceable']/passive_effect[@name='DegradationMax']/@value">12500</set>
+	<append xpath="/items/item[@name='vehicleSonjaArmyTruck_NLPlaceable']/effect_group[@name='vehicleSonjaArmyTruckPlaceable']">
+		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
+	</append>
+
+	<!-- Army Truck Dyes NL | HP: 10000 → 12500 -->
+	<set xpath="/items/item[@name='vehicleSonjaArmyTruck_Dyes_NLPlaceable']/effect_group[@name='vehicleSonjaArmyTruckPlaceable']/passive_effect[@name='DegradationMax']/@value">12500</set>
+	<append xpath="/items/item[@name='vehicleSonjaArmyTruck_Dyes_NLPlaceable']/effect_group[@name='vehicleSonjaArmyTruckPlaceable']">
 		<passive_effect name="VehicleSelfDamage" operation="perc_add" value="-.5" tags="vehicle"/>
 	</append>
 

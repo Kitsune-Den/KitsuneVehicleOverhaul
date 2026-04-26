@@ -4,7 +4,7 @@
 
 [![Download on Nexus Mods](https://img.shields.io/badge/Download-Nexus_Mods-da8e35?style=flat&logo=nexusmods&logoColor=white)](https://www.nexusmods.com/7daystodie/mods/10057)
 [![7 Days to Die V1.0+](https://img.shields.io/badge/7_Days_to_Die-V1.0%2B-8b0000?style=flat)](https://7daystodie.com)
-[![Vehicles Patched](https://img.shields.io/badge/vehicles_patched-188-orange?style=flat)](#supported-vehicles)
+[![Vehicles Patched](https://img.shields.io/badge/vehicles_patched-202-orange?style=flat)](#supported-vehicles)
 [![License](https://img.shields.io/github/license/Kitsune-Den/KitsuneVehicleOverhaul?style=flat)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/Kitsune-Den/KitsuneVehicleOverhaul?style=flat&logo=github)](https://github.com/Kitsune-Den/KitsuneVehicleOverhaul/stargazers)
 
@@ -12,7 +12,7 @@
 
 Kitsune Vehicle Overhaul rebalances vehicle collision damage so driving through the desert doesn't feel like driving through a minefield. Cacti shatter on impact, heavier vehicles shrug off rough terrain, and you stop burning through repair kits every five minutes.
 
-Patches **188 vehicles** across vanilla, Bdub's Vehicles, Vehicle Madness, Witos Vehicles, and Vehicle Additions. All optional. Install the vehicle packs you want, the mod handles the rest. Server-side only, no client install needed.
+Patches **202 vehicles** across vanilla, Bdub's Vehicles, Vehicle Madness, Witos Vehicles, Vehicle Additions, and LittleRedSonja Vehicles. All optional. Install the vehicle packs you want, the mod handles the rest. Server-side only, no client install needed.
 
 ---
 
@@ -54,7 +54,7 @@ Repair kits work the same as vanilla. Each kit restores a flat 1,000 HP plus a p
 
 ## Supported Vehicles
 
-**188 vehicles total** across 5 mod packs (all optional except vanilla):
+**202 vehicles total** across 6 mod packs (all optional except vanilla):
 
 ### Vanilla (5)
 Bicycle, Minibike, Motorcycle, 4x4 Truck, Gyrocopter
@@ -90,6 +90,12 @@ Bicycle, Minibike, Motorcycle, 4x4 Truck, Gyrocopter
 - **Trucks/Industrial (10):** Forklift, Army Truck, Farm Truck, PT (Generic/Mo Power/Ambulance), Tractor, Backhoe, Semi Truck, Fire Truck
 - **Buses (4):** Small/Large City + School Buses
 
+### LittleRedSonja Vehicles (14) — *supported, not required*
+- **Cars (1):** Pink Corvette
+- **Motorcycles (4):** Barbie Davidson + Boring Davidson (regular + NS variants)
+- **Aircraft / Hover (3):** Flying Magic Broom, StarWars Speeder Bike (+ Paintable)
+- **Trucks/Heavy (6):** Farmer Sage Tractor (+ Grey), Army Truck (4 variants: base, Dyes, NL, Dyes NL)
+
 ---
 
 ## Installation
@@ -121,6 +127,7 @@ Drop the `zz_Kitsune Vehicle Overhaul` folder into your game's `Mods/` directory
 - **Vehicle Madness** — full support (optional)
 - **Witos Vehicles** — full support, requires WitosRoot (optional)
 - **Vehicle Additions** — full support (optional)
+- **LittleRedSonja Vehicles** — full support (optional)
 - **Vehicle Armor Mod / Vehicle Plow Mod** — stacks cleanly (those use `VehicleStrongSelfDamage`, we use `VehicleSelfDamage`)
 - **Grease Monkey / Intellect Mastery perks** — stacks additively as intended
 - **Other vehicle mods** — no conflicts, but unpatched vehicles won't receive buffs
@@ -154,5 +161,6 @@ hp_per_kit = 1000 + (max_health * intellect_mastery_rank * 0.1)
 - **Bdub** — Bdub's Vehicles
 - **Ragsy / Guppycur** — Vehicle Madness
 - **Witos** — Witos Vehicles + WitosRoot
+- **LittleRedSonja** — LittleRedSonja Vehicles
 - **The Fun Pimps** — 7 Days to Die
 - **SwiftPlays** — Catching the load order bug in v1.1.0
