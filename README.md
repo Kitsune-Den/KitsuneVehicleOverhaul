@@ -116,7 +116,7 @@ Drop the `zz_Kitsune Vehicle Overhaul` folder into your game's `Mods/` directory
 
 **Server-side only.** Clients don't need to install anything. Configs are sent on connect.
 
-> **Note:** You may see XPath warnings in the log for vehicle packs you don't have installed. These are harmless. The game simply skips patches for vehicles that don't exist.
+> **v1.3.0:** Patches are now wrapped in `mod_loaded()` conditionals, so uninstalled vehicle packs produce **zero warnings** in the log. Cleaner logs, same functionality.
 
 ---
 
