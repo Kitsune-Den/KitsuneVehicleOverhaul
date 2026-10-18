@@ -164,3 +164,7 @@ hp_per_kit = 1000 + (max_health * intellect_mastery_rank * 0.1)
 - **LittleRedSonja** — LittleRedSonja Vehicles
 - **The Fun Pimps** — 7 Days to Die
 - **SwiftPlays** — Catching the load order bug in v1.1.0
+
+## License
+
+[CC BY-NC-SA 4.0](LICENSE), with an extra permission for servers that make money: see [NOTICE.md](NOTICE.md). In short: play it, change it and share it, with credit, not for sale, and with changed versions under the same license.
