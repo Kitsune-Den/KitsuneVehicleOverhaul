@@ -3,16 +3,30 @@
 ![KitsuneVehicleOverhaul](kitsune-overhaul.jpg)
 
 [![Download on Nexus Mods](https://img.shields.io/badge/Download-Nexus_Mods-da8e35?style=flat&logo=nexusmods&logoColor=white)](https://www.nexusmods.com/7daystodie/mods/10057)
-[![7 Days to Die V1.0-V3.0](https://img.shields.io/badge/7_Days_to_Die-V1.0--V3.0-8b0000?style=flat)](https://7daystodie.com)
+[![7 Days to Die V1.0-V3.3](https://img.shields.io/badge/7_Days_to_Die-V1.0--V3.3-8b0000?style=flat)](https://7daystodie.com)
 [![Vehicles Patched](https://img.shields.io/badge/vehicles_patched-202-orange?style=flat)](#supported-vehicles)
 [![License](https://img.shields.io/badge/license-CC_BY--NC--SA_4.0-blue?style=flat)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/Kitsune-Den/KitsuneVehicleOverhaul?style=flat&logo=github)](https://github.com/Kitsune-Den/KitsuneVehicleOverhaul/stargazers)
 
 **Your 4x4 truck weighs two tons. A cactus should not total it.**
 
-Kitsune Vehicle Overhaul rebalances vehicle collision damage so driving through the desert doesn't feel like driving through a minefield. Cacti shatter on impact, heavier vehicles shrug off rough terrain, and you stop burning through repair kits every five minutes.
+Kitsune Vehicle Overhaul fixes the big saguaro cacti that hit like concrete walls, and gives every vehicle its own collision resistance based on how heavy it is. A tank shrugs off what would wreck a BMX. A bicycle still feels like a bicycle. And you stop burning through repair kits every five minutes.
 
 Patches **202 vehicles** across vanilla, Bdub's Vehicles, Vehicle Madness, Witos Vehicles, Vehicle Additions, and LittleRedSonja Vehicles. All optional. Install the vehicle packs you want, the mod handles the rest. Server-side only, no client install needed.
+
+### Doesn't the sandbox already do this?
+
+Kind of. Since V3.0 there's a **Vehicle Self Damage** slider in the sandbox settings, and if all you want is "crashes hurt less," turn it down and you're done. You don't need this mod for that.
+
+But it's one number for every vehicle. Drop it far enough that your 4x4 stops dying to desert plants and your bicycles turn basically indestructible too (one server admin told us that's exactly what happened before they switched). And it can't touch the cacti. The only block option is **Vehicle Block Damage**, which hits every block in the game, so cranking it to plow through saguaros means plowing through concrete too.
+
+What you get here that the sliders can't do:
+
+- The saguaro fix, on the cacti and nothing else
+- Resistance by weight class: -15% on a bicycle, -60% on a tank, everything else somewhere in between
+- A small HP bump, since there's no sandbox setting for vehicle health at all
+
+Already turned the slider down? The two stack. Leave it at 100% unless you want things even tankier.
 
 ---
 
@@ -122,7 +136,8 @@ Drop the `zz_Kitsune Vehicle Overhaul` folder into your game's `Mods/` directory
 
 ## Compatibility
 
-- **7 Days to Die V1.0-V3.0**
+- **7 Days to Die V1.0-V3.3**
+- **Sandbox Vehicle Self Damage slider**: stacks with our resistance, so leave it at 100% unless you want more
 - **Bdub's Vehicles** — full support (optional)
 - **Vehicle Madness** — full support (optional)
 - **Witos Vehicles** — full support, requires WitosRoot (optional)
